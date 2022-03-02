@@ -12,25 +12,26 @@ int main()
     {
         if(count>4)
         {
-            for(int k = 5;k>0;k--)
+            for(int k = 0;k<4;k++)
             {
-                arr[k] = arr[k-1];
+                arr[k] = arr[k+1];
             }
         }
-        else
-        {
-            for(int k = count;k>0;k--)
-            {
-                arr[k] = arr[k-1];
-            }
-        }
+
         //int input;
         //arr[count] = scanf("%d",&input);
         printf("\nEnter a number: ");
         gets(str);
         int value = atoi(str);
         printf("\nvalue: %d",value);
-        arr[0] = value;
+        if(count>4)
+        {
+            arr[4] = value;
+        }
+        else
+        {
+            arr[count] = value;
+        }
         count++;
         if(count>4)
         {
